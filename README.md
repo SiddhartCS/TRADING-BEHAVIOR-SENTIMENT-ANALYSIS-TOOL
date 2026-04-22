@@ -1,13 +1,12 @@
-================================================================================
+
 TRADING BEHAVIOR & SENTIMENT ANALYSIS TOOL
-================================================================================
+
 Version: 1.0
 Last Updated: 2026
 Author: ATMS Trading Bot Project
 
-================================================================================
+
 OVERVIEW
-================================================================================
 
 This tool analyzes historical trading data against market sentiment indicators
 (Fear & Greed Index) to identify patterns in trader behavior and performance.
@@ -18,9 +17,9 @@ The analysis covers:
 - Trader segmentation by leverage and activity levels
 - Predictive modeling for trade outcome probability
 
-================================================================================
+
 REQUIREMENTS
-================================================================================
+
 
 Python Version: 3.8 or higher
 
@@ -34,9 +33,7 @@ Required Libraries:
 Installation Command:
 pip install pandas numpy matplotlib seaborn scikit-learn
 
-================================================================================
 FILE STRUCTURE
-================================================================================
 
 project/
 ├── analysis.py                 # Main analysis script
@@ -49,9 +46,7 @@ project/
 ├── segment_analysis.png        # Visualization (OUTPUT)
 └── README.txt                  # This file
 
-================================================================================
 INPUT FILE FORMATS
-================================================================================
 
 1. historical_data.csv
    Required columns:
@@ -74,9 +69,8 @@ INPUT FILE FORMATS
    - value                  : Index value (0-100)
    - classification         : Sentiment label (Extreme Fear/Fear/Neutral/Greed/Extreme Greed)
 
-================================================================================
 OUTPUT FILES
-================================================================================
+
 
 1. sentiment_performance.csv
    Columns:
@@ -100,10 +94,8 @@ OUTPUT FILES
    - performance_analysis.png  : Bar charts of PnL and win rate by sentiment
    - behaviour_analysis.png    : Trade frequency vs leverage by sentiment
    - segment_analysis.png      : PnL heatmap by sentiment and leverage segment
-
-================================================================================
+     
 USAGE
-================================================================================
 
 1. Prepare your data files:
    - Place historical_data.csv and fear_greed_index.csv in the script directory
@@ -117,9 +109,8 @@ USAGE
    - CSV files will be generated for further analysis
    - PNG files will be saved with visualizations
 
-================================================================================
 KEY METRICS EXPLAINED
-================================================================================
+
 
 1. Sentiment Classification (Fear & Greed Index):
    - Extreme Fear (0-20)   : Market panic, potential buying opportunity
@@ -138,9 +129,9 @@ KEY METRICS EXPLAINED
 4. Win Rate:
    Percentage of days with positive PnL.
 
-================================================================================
+
 TROUBLESHOOTING
-================================================================================
+
 
 Issue: "File not found" error
 Solution: Ensure historical_data.csv and fear_greed_index.csv are in the
@@ -159,9 +150,9 @@ Issue: Memory error with large dataset
 Solution: The script processes data efficiently but very large files (>1M rows)
           may require additional RAM. Consider sampling your data.
 
-================================================================================
+
 CUSTOMIZATION
-================================================================================
+
 
 To modify the analysis:
 
@@ -177,9 +168,9 @@ To modify the analysis:
 4. Change visualization colors:
    Edit the 'colors' list in the Performance and Behaviour sections.
 
-================================================================================
+
 NOTES & LIMITATIONS
-================================================================================
+
 
 1. Data Quality:
    - Trades with missing timestamps are dropped
@@ -200,9 +191,9 @@ NOTES & LIMITATIONS
    - Ensure sentiment data covers the full date range of trades
 
 
-================================================================================
+
 VERSION HISTORY
-================================================================================
+
 
 v1.0 (2026-04)
 - Initial release
@@ -212,6 +203,6 @@ v1.0 (2026-04)
 - Basic predictive modeling
 - Visualization exports
 
-================================================================================
+
 END OF README
-================================================================================
+
